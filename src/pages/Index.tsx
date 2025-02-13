@@ -1,5 +1,5 @@
 
-import { Brain, Gamepad2, User, Activity, BookOpen } from "lucide-react";
+import { Brain, Gamepad2, User, Activity, BookOpen, FileText } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { WelcomeCard } from "@/components/WelcomeCard";
 import { CategoryCard } from "@/components/CategoryCard";
@@ -38,9 +38,16 @@ const Index = () => {
     },
     {
       icon: Activity,
-      title: "Mi Cirugía",
-      description: "Información actualizada sobre tu proceso",
+      title: "Fase del proceso perioperatorio",
+      description: "Información actualizada sobre fase del proceso quirúrgico en el que se encuentra",
       to: "/cirugia",
+      color: "bg-[#9b87f5]", // Solid Purple
+    },
+    {
+      icon: FileText,
+      title: "Información relevante",
+      description: "Documentos y datos importantes sobre tu proceso",
+      to: "/informacion",
       color: "bg-[#9b87f5]", // Solid Purple
     },
   ];
