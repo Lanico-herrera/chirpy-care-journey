@@ -18,20 +18,18 @@ export const CategoryCard = ({
   color,
 }: CategoryCardProps) => {
   return (
-    <Link
-      to={to}
-      className={`block p-4 rounded-2xl ${color} transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden`}
+    <div
+      className={`${color} rounded-2xl p-6 h-full shadow-lg hover:shadow-xl transition-shadow duration-300`}
     >
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
-      <div className="flex items-start space-x-4 relative z-10">
-        <div className="bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-          <Icon className="w-6 h-6 text-gray-700" />
+      <div className="flex flex-col items-center text-center space-y-4">
+        <div className="bg-white/90 p-4 rounded-full shadow-md">
+          <Icon className="w-8 h-8 text-gray-700" />
         </div>
         <div>
-          <h3 className="font-semibold text-gray-800">{title}</h3>
-          <p className="text-sm text-gray-700 mt-1">{description}</p>
+          <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
+          <p className="text-gray-700">{description}</p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
