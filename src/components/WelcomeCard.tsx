@@ -20,7 +20,7 @@ export const WelcomeCard = ({ name = "amiguito" }: WelcomeCardProps) => {
         />
       </div>
       <h2 className="text-2xl font-bold text-white mb-2 relative z-10">
-        ¡Hola {name}! 👋
+        ¡Hola amiguita, hola amiguito! 👋
       </h2>
       <p className="text-white/90 relative z-10">
         Estamos aquí para acompañarte en tu aventura en el hospital. ¡Juntos haremos que sea una experiencia increíble!

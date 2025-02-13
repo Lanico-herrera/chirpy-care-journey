@@ -57,7 +57,15 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary via-accent to-highlight pb-20">
+    <div 
+      className="min-h-screen pb-20"
+      style={{
+        backgroundImage: "url('/lovable-uploads/1acfbc6b-9bbf-4677-80af-58d5db81fbab.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
       <div className="max-w-screen-xl mx-auto px-4 py-6 sm:px-6 relative">
         <img 
           src="/lovable-uploads/f634e0d9-b343-4d93-87bd-d00af0370c81.png"
