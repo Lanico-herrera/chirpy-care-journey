@@ -1,5 +1,5 @@
 
-import { Brain, Gamepad2, User, Activity } from "lucide-react";
+import { Brain, Gamepad2, User, Activity, BookOpen } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { WelcomeCard } from "@/components/WelcomeCard";
 import { CategoryCard } from "@/components/CategoryCard";
