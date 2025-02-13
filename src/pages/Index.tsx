@@ -1,4 +1,3 @@
-
 import { Brain, Gamepad2, User, Activity, BookOpen, FileText } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { WelcomeCard } from "@/components/WelcomeCard";
@@ -34,21 +33,21 @@ const Index = () => {
       title: "Mi Avatar",
       description: "Crea tu personaje especial para esta aventura",
       to: "/avatar",
-      color: "bg-[#9b87f5]", // Solid Purple
+      color: "bg-[#E5DEFF]", // Soft Purple
     },
     {
       icon: Activity,
       title: "Fase del proceso perioperatorio",
       description: "Información actualizada sobre fase del proceso quirúrgico en el que se encuentra",
       to: "/cirugia",
-      color: "bg-[#9b87f5]", // Solid Purple
+      color: "bg-[#D3E4FD]", // Soft Blue
     },
     {
       icon: FileText,
       title: "Información relevante",
       description: "Documentos y datos importantes sobre tu proceso",
       to: "/informacion",
-      color: "bg-[#9b87f5]", // Solid Purple
+      color: "bg-[#F2FCE2]", // Soft Green
     },
   ];
 

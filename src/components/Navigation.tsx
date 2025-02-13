@@ -1,5 +1,5 @@
 
-import { Home, BookOpen, Gamepad2, User, Activity } from "lucide-react";
+import { Home, BookOpen, Gamepad2, User, Activity, FileText } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export const Navigation = () => {
@@ -9,10 +9,11 @@ export const Navigation = () => {
 
   const navItems = [
     { icon: Home, label: "Inicio", path: "/" },
-    { icon: BookOpen, label: "Aprender", path: "/aprender" },
+    { icon: BookOpen, label: "Cuentos", path: "/cuentos" },
     { icon: Gamepad2, label: "Jugar", path: "/jugar" },
     { icon: User, label: "Mi Avatar", path: "/avatar" },
     { icon: Activity, label: "Mi Cirugía", path: "/cirugia" },
+    { icon: FileText, label: "Info", path: "/informacion" },
   ];
 
   return (
