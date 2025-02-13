@@ -8,14 +8,14 @@ import {
 } from "@/components/ui/tooltip";
 
 const predefinedColors = [
-  "#F2FCE2", // Soft Green
-  "#FEF7CD", // Soft Yellow
-  "#FEC6A1", // Soft Orange
-  "#E5DEFF", // Soft Purple
-  "#FFDEE2", // Soft Pink
-  "#FDE1D3", // Soft Peach
-  "#D3E4FD", // Soft Blue
-  "#F1F0FB", // Soft Gray
+  "#FFE0E0", // Rosa muy suave
+  "#E0FFE0", // Verde muy suave
+  "#E0E0FF", // Azul muy suave
+  "#FFFFE0", // Amarillo muy suave
+  "#FFE0FF", // Morado muy suave
+  "#E0FFFF", // Cyan muy suave
+  "#FFE5CC", // Naranja muy suave
+  "#F5F5F5", // Gris muy suave
 ];
 
 interface ColorPickerProps {

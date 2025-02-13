@@ -10,7 +10,7 @@ import { toast } from "sonner";
 const ColorearHospital = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [fabricCanvas, setFabricCanvas] = useState<FabricCanvas | null>(null);
-  const [activeColor, setActiveColor] = useState("#000000");
+  const [activeColor, setActiveColor] = useState("#FFE0E0");
   const [isDrawing, setIsDrawing] = useState(true);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const ColorearHospital = () => {
       canvas.freeDrawingBrush.color = activeColor;
     }
 
-    // Cargar la imagen del quirófano como fondo
+    // Cargar la imagen del hospital como fondo (en blanco y negro)
     const img = new Image();
     img.src = "/lovable-uploads/74ffee88-0fc1-4243-89cb-a6ea10a4f523.png";
     img.onload = () => {
@@ -38,7 +38,12 @@ const ColorearHospital = () => {
         scaleX: canvas.width! / img.width,
         scaleY: canvas.height! / img.height,
         selectable: false,
+        filters: [
+          new fabric.Image.filters.Grayscale(),
+          new fabric.Image.filters.Brightness({ brightness: 0.1 }) // Ajustar el brillo para que sea más claro
+        ]
       });
+      fabricImage.applyFilters();
       canvas.backgroundImage = fabricImage;
       canvas.renderAll();
       toast("¡Listo para colorear!");
@@ -66,7 +71,12 @@ const ColorearHospital = () => {
         scaleX: fabricCanvas.width! / img.width,
         scaleY: fabricCanvas.height! / img.height,
         selectable: false,
+        filters: [
+          new fabric.Image.filters.Grayscale(),
+          new fabric.Image.filters.Brightness({ brightness: 0.1 })
+        ]
       });
+      fabricImage.applyFilters();
       fabricCanvas.backgroundImage = fabricImage;
       fabricCanvas.renderAll();
     };
@@ -86,10 +96,10 @@ const ColorearHospital = () => {
       <div className="max-w-screen-xl mx-auto px-4 pt-16 sm:pt-20 pb-6 sm:px-6">
         <div className="mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
-            Colorea el Quirófano 🎨
+            Colorea el Hospital 🎨
           </h1>
           <p className="text-gray-600">
-            ¡Dale vida al quirófano con tus colores favoritos!
+            ¡Dale vida al hospital con tus colores favoritos!
           </p>
         </div>
 
