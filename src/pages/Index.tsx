@@ -4,6 +4,7 @@ import { Navigation } from "@/components/Navigation";
 import { WelcomeCard } from "@/components/WelcomeCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const categories = [
@@ -35,6 +36,27 @@ const Index = () => {
       to: "/cirugia",
       color: "bg-[#FFDEE2]", // Soft Pink
     },
+  ];
+
+  const stories = [
+    {
+      id: 1,
+      title: "Mi Amigo el Hospital",
+      description: "Descubre el hospital de una manera divertida y amigable",
+      to: "/aprender/mi-amigo-hospital"
+    },
+    {
+      id: 2,
+      title: "La Aventura de Sara en Pabellón",
+      description: "Acompaña a Sara en su visita al pabellón quirúrgico",
+      to: "/aprender/sara-pabellon"
+    },
+    {
+      id: 3,
+      title: "El Doctor Oso y sus Amigos",
+      description: "Una historia sobre la amistad y el cuidado en el hospital",
+      to: "/aprender/doctor-oso"
+    }
   ];
 
   const containerVariants = {
@@ -74,7 +96,41 @@ const Index = () => {
           className="absolute top-2 right-4 h-12 sm:h-16 z-50"
         />
         <WelcomeCard />
+
+        {/* Módulo de Cuentos */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="mb-8"
+        >
+          <div className="bg-[#E5DEFF] rounded-2xl p-6 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">Cuentos Infantiles</h2>
+            <p className="text-gray-700 mb-4">Descubre historias que te ayudarán a sentirte más tranquilo</p>
+            <div className="grid gap-3">
+              {stories.map((story) => (
+                <motion.div key={story.id} variants={itemVariants}>
+                  <Link
+                    to={story.to}
+                    className="block bg-white/80 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-all"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="bg-white p-2 rounded-lg">
+                        <BookOpen className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-800">{story.title}</h3>
+                        <p className="text-sm text-gray-600">{story.description}</p>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
         
+        {/* Categorías */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
