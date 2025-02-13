@@ -12,28 +12,28 @@ const Index = () => {
       title: "Aprender",
       description: "Descubre todo sobre tu cirugía de una manera divertida",
       to: "/aprender",
-      color: "bg-secondary-soft",
+      color: "bg-gradient-to-br from-secondary to-secondary-dark",
     },
     {
       icon: Gamepad2,
       title: "Jugar",
       description: "¡Diviértete con juegos especialmente diseñados para ti!",
       to: "/jugar",
-      color: "bg-primary-soft",
+      color: "bg-gradient-to-br from-primary to-primary-dark",
     },
     {
       icon: User,
       title: "Mi Avatar",
       description: "Crea tu personaje especial para esta aventura",
       to: "/avatar",
-      color: "bg-accent-soft",
+      color: "bg-gradient-to-br from-accent to-accent-dark",
     },
     {
       icon: Activity,
       title: "Mi Cirugía",
       description: "Información actualizada sobre tu proceso",
       to: "/cirugia",
-      color: "bg-secondary-soft",
+      color: "bg-gradient-to-br from-highlight to-highlight-dark",
     },
   ];
 

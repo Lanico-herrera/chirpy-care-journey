@@ -10,12 +10,19 @@ export const WelcomeCard = ({ name = "amiguito" }: WelcomeCardProps) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-primary-soft rounded-3xl p-6 shadow-lg mb-6"
+      className="bg-gradient-to-br from-primary-soft to-primary rounded-3xl p-6 shadow-lg mb-6 relative overflow-hidden"
     >
-      <h2 className="text-2xl font-bold text-gray-800 mb-2">
+      <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform rotate-45">
+        <img
+          src="/placeholder.svg"
+          alt="Decorative"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h2 className="text-2xl font-bold text-white mb-2 relative z-10">
         ¡Hola {name}! 👋
       </h2>
-      <p className="text-gray-600">
+      <p className="text-white/90 relative z-10">
         Estamos aquí para acompañarte en tu aventura en el hospital. ¡Juntos haremos que sea una experiencia increíble!
       </p>
     </motion.div>
