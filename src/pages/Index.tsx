@@ -1,5 +1,5 @@
 
-import { BookOpen, Gamepad2, User, Activity } from "lucide-react";
+import { Brain, Gamepad2, User, Activity } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { WelcomeCard } from "@/components/WelcomeCard";
 import { CategoryCard } from "@/components/CategoryCard";
@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Index = () => {
   const categories = [
     {
-      icon: BookOpen,
+      icon: Brain,
       title: "Aprender",
       description: "Descubre todo sobre tu cirugía de una manera divertida",
       to: "/aprender",
@@ -31,7 +31,7 @@ const Index = () => {
     },
     {
       icon: Activity,
-      title: "Mi Cirugía",
+      title: "Fase de proceso quirúrgico",
       description: "Información actualizada sobre tu proceso",
       to: "/cirugia",
       color: "bg-[#FFDEE2]", // Soft Pink
@@ -84,17 +84,13 @@ const Index = () => {
           className="mb-8"
         >
           <Link to="/cuentos" className="block">
-            <div className="bg-[#E5DEFF] rounded-2xl p-6 mb-4 hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-4">
-                <div className="bg-white p-3 rounded-xl">
-                  <BookOpen className="w-6 h-6 text-gray-700" />
-                </div>
-                <div>
-                  <h2 className="text-xl font-bold text-gray-800">Cuentos</h2>
-                  <p className="text-gray-700">Descubre historias que te ayudarán a sentirte más tranquilo/a</p>
-                </div>
-              </div>
-            </div>
+            <CategoryCard
+              icon={BookOpen}
+              title="Cuentos"
+              description="Descubre historias que te ayudarán a sentirte más tranquilo/a"
+              to="/cuentos"
+              color="bg-[#E5DEFF]"
+            />
           </Link>
         </motion.div>
         
