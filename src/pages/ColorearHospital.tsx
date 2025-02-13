@@ -1,6 +1,6 @@
 
 import { useEffect, useRef, useState } from "react";
-import { Canvas as FabricCanvas } from "fabric";
+import { Canvas as FabricCanvas, Image as FabricImage } from "fabric";
 import { Navigation } from "@/components/Navigation";
 import { ColorPicker } from "@/components/ColorPicker";
 import { Button } from "@/components/ui/button";
@@ -22,16 +22,17 @@ const ColorearHospital = () => {
       isDrawingMode: true,
     });
 
-    // Cargar la imagen del hospital como fondo
+    // Cargar la imagen del quirófano como fondo
     const img = new Image();
-    img.src = "/lovable-uploads/74ffee88-0fc1-4243-89cb-a6ea10a4f523.png";
+    img.src = "/lovable-uploads/f634e0d9-b343-4d93-87bd-d00af0370c81.png";
     img.onload = () => {
-      const fabricImage = new fabric.Image(img, {
+      const fabricImage = new FabricImage(img, {
         scaleX: canvas.width! / img.width,
         scaleY: canvas.height! / img.height,
         selectable: false,
       });
-      canvas.setBackgroundImage(fabricImage, canvas.renderAll.bind(canvas));
+      canvas.backgroundImage = fabricImage;
+      canvas.renderAll();
       toast("¡Listo para colorear!");
     };
 
@@ -57,14 +58,15 @@ const ColorearHospital = () => {
     fabricCanvas.clear();
     // Recargar la imagen de fondo
     const img = new Image();
-    img.src = "/lovable-uploads/74ffee88-0fc1-4243-89cb-a6ea10a4f523.png";
+    img.src = "/lovable-uploads/f634e0d9-b343-4d93-87bd-d00af0370c81.png";
     img.onload = () => {
-      const fabricImage = new fabric.Image(img, {
+      const fabricImage = new FabricImage(img, {
         scaleX: fabricCanvas.width! / img.width,
         scaleY: fabricCanvas.height! / img.height,
         selectable: false,
       });
-      fabricCanvas.setBackgroundImage(fabricImage, fabricCanvas.renderAll.bind(fabricCanvas));
+      fabricCanvas.backgroundImage = fabricImage;
+      fabricCanvas.renderAll();
     };
     toast("¡Lienzo limpio!");
   };
@@ -82,10 +84,10 @@ const ColorearHospital = () => {
       <div className="max-w-screen-xl mx-auto px-4 pt-16 sm:pt-20 pb-6 sm:px-6">
         <div className="mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
-            Colorea el Hospital 🎨
+            Colorea el Quirófano 🎨
           </h1>
           <p className="text-gray-600">
-            ¡Dale vida al hospital con tus colores favoritos!
+            ¡Dale vida al quirófano con tus colores favoritos!
           </p>
         </div>
 
