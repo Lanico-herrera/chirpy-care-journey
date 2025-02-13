@@ -16,7 +16,7 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-[#8B5CF6] border-t border-[#7C3AED] px-4 py-2 sm:px-6">
+    <nav className="fixed bottom-0 left-0 right-0 bg-[#8B5CF6] shadow-lg px-4 py-2 sm:px-6">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-around items-center">
           {navItems.map(({ icon: Icon, label, path }) => (
@@ -25,8 +25,8 @@ export const Navigation = () => {
               to={path}
               className={`flex flex-col items-center p-2 rounded-lg transition-all duration-200 ${
                 isActive(path)
-                  ? "text-white scale-110"
-                  : "text-white/80 hover:text-white"
+                  ? "text-white scale-110 font-medium"
+                  : "text-white hover:text-white hover:scale-105"
               }`}
             >
               <Icon className="w-6 h-6" />
