@@ -6,6 +6,7 @@ import { ColorPicker } from "@/components/ColorPicker";
 import { Button } from "@/components/ui/button";
 import { Eraser, Paintbrush, RotateCcw } from "lucide-react";
 import { toast } from "sonner";
+import { filters } from "fabric";
 
 const ColorearHospital = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -39,8 +40,8 @@ const ColorearHospital = () => {
         scaleY: canvas.height! / img.height,
         selectable: false,
         filters: [
-          new fabric.Image.filters.Grayscale(),
-          new fabric.Image.filters.Brightness({ brightness: 0.1 }) // Ajustar el brillo para que sea más claro
+          new filters.Grayscale(),
+          new filters.Brightness({ brightness: 0.1 }) // Ajustar el brillo para que sea más claro
         ]
       });
       fabricImage.applyFilters();
@@ -72,8 +73,8 @@ const ColorearHospital = () => {
         scaleY: fabricCanvas.height! / img.height,
         selectable: false,
         filters: [
-          new fabric.Image.filters.Grayscale(),
-          new fabric.Image.filters.Brightness({ brightness: 0.1 })
+          new filters.Grayscale(),
+          new filters.Brightness({ brightness: 0.1 })
         ]
       });
       fabricImage.applyFilters();
