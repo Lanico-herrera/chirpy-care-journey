@@ -60,17 +60,17 @@ const Index = () => {
     <div 
       className="min-h-screen pb-20"
       style={{
-        backgroundImage: "url('/lovable-uploads/1acfbc6b-9bbf-4677-80af-58d5db81fbab.png')",
+        backgroundImage: "url('/lovable-uploads/8830aa38-4f1c-4adc-8a25-9f348d0e053b.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
       }}
     >
-      <div className="max-w-screen-xl mx-auto px-4 py-6 sm:px-6 relative">
+      <div className="max-w-screen-xl mx-auto px-4 pt-16 sm:pt-20 pb-6 sm:px-6 relative">
         <img 
           src="/lovable-uploads/f634e0d9-b343-4d93-87bd-d00af0370c81.png"
           alt="Hospital de Niños Dr. Luis Calvo Mackenna"
-          className="absolute top-4 right-4 h-16 sm:h-20 z-50"
+          className="absolute top-2 right-4 h-12 sm:h-16 z-50"
         />
         <WelcomeCard />
         
