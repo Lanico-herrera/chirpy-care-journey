@@ -1,12 +1,80 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { BookOpen, Gamepad2, User, Activity } from "lucide-react";
+import { Navigation } from "@/components/Navigation";
+import { WelcomeCard } from "@/components/WelcomeCard";
+import { CategoryCard } from "@/components/CategoryCard";
+import { motion } from "framer-motion";
 
 const Index = () => {
+  const categories = [
+    {
+      icon: BookOpen,
+      title: "Aprender",
+      description: "Descubre todo sobre tu cirugía de una manera divertida",
+      to: "/aprender",
+      color: "bg-secondary-soft",
+    },
+    {
+      icon: Gamepad2,
+      title: "Jugar",
+      description: "¡Diviértete con juegos especialmente diseñados para ti!",
+      to: "/jugar",
+      color: "bg-primary-soft",
+    },
+    {
+      icon: User,
+      title: "Mi Avatar",
+      description: "Crea tu personaje especial para esta aventura",
+      to: "/avatar",
+      color: "bg-accent-soft",
+    },
+    {
+      icon: Activity,
+      title: "Mi Cirugía",
+      description: "Información actualizada sobre tu proceso",
+      to: "/cirugia",
+      color: "bg-secondary-soft",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <div className="max-w-screen-xl mx-auto px-4 py-6 sm:px-6">
+        <WelcomeCard />
+        
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid gap-4"
+        >
+          {categories.map((category, index) => (
+            <motion.div key={category.title} variants={itemVariants}>
+              <CategoryCard {...category} />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
+      <Navigation />
     </div>
   );
 };
