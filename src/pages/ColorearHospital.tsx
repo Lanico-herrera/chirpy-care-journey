@@ -32,7 +32,7 @@ const ColorearHospital = () => {
 
     // Cargar la imagen del quirófano como fondo
     const img = new Image();
-    img.src = "/lovable-uploads/f634e0d9-b343-4d93-87bd-d00af0370c81.png";
+    img.src = "/lovable-uploads/74ffee88-0fc1-4243-89cb-a6ea10a4f523.png";
     img.onload = () => {
       const fabricImage = new FabricImage(img, {
         scaleX: canvas.width! / img.width,
@@ -60,7 +60,7 @@ const ColorearHospital = () => {
     fabricCanvas.clear();
     // Recargar la imagen de fondo
     const img = new Image();
-    img.src = "/lovable-uploads/f634e0d9-b343-4d93-87bd-d00af0370c81.png";
+    img.src = "/lovable-uploads/74ffee88-0fc1-4243-89cb-a6ea10a4f523.png";
     img.onload = () => {
       const fabricImage = new FabricImage(img, {
         scaleX: fabricCanvas.width! / img.width,
