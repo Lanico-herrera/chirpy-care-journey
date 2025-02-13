@@ -105,8 +105,8 @@ const Index = () => {
           className="mb-8"
         >
           <div className="bg-[#E5DEFF] rounded-2xl p-6 mb-4">
-            <h2 className="text-xl font-bold text-gray-800 mb-3">Cuentos Infantiles</h2>
-            <p className="text-gray-700 mb-4">Descubre historias que te ayudarán a sentirte más tranquilo</p>
+            <h2 className="text-xl font-bold text-gray-800 mb-3">Cuentos</h2>
+            <p className="text-gray-700 mb-4">Descubre historias que te ayudarán a sentirte más tranquilo/a</p>
             <div className="grid gap-3">
               {stories.map((story) => (
                 <motion.div key={story.id} variants={itemVariants}>
