@@ -20,7 +20,7 @@ export const CategoryCard = ({
   return (
     <Link
       to={to}
-      className={`block p-4 rounded-2xl ${color} transition-all duration-300 hover:scale-105 hover:shadow-lg animate-bounce-slight relative overflow-hidden`}
+      className={`block p-4 rounded-2xl ${color} transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden`}
     >
       <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
       <div className="flex items-start space-x-4 relative z-10">

@@ -57,7 +57,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-20">
+    <div className="min-h-screen bg-gradient-to-b from-primary via-accent to-highlight pb-20">
       <div className="max-w-screen-xl mx-auto px-4 py-6 sm:px-6">
         <WelcomeCard />
         
