@@ -22,6 +22,14 @@ const ColorearHospital = () => {
       isDrawingMode: true,
     });
 
+    setFabricCanvas(canvas);
+
+    // Configurar el pincel después de crear el canvas
+    if (canvas.freeDrawingBrush) {
+      canvas.freeDrawingBrush.width = 5;
+      canvas.freeDrawingBrush.color = activeColor;
+    }
+
     // Cargar la imagen del quirófano como fondo
     const img = new Image();
     img.src = "/lovable-uploads/f634e0d9-b343-4d93-87bd-d00af0370c81.png";
@@ -36,19 +44,13 @@ const ColorearHospital = () => {
       toast("¡Listo para colorear!");
     };
 
-    // Configurar el pincel
-    canvas.freeDrawingBrush.width = 5;
-    canvas.freeDrawingBrush.color = activeColor;
-
-    setFabricCanvas(canvas);
-
     return () => {
       canvas.dispose();
     };
   }, []);
 
   useEffect(() => {
-    if (!fabricCanvas) return;
+    if (!fabricCanvas?.freeDrawingBrush) return;
     fabricCanvas.freeDrawingBrush.color = activeColor;
     fabricCanvas.freeDrawingBrush.width = isDrawing ? 5 : 20;
   }, [activeColor, isDrawing, fabricCanvas]);
@@ -73,7 +75,7 @@ const ColorearHospital = () => {
 
   const toggleDrawingMode = () => {
     setIsDrawing(!isDrawing);
-    if (fabricCanvas) {
+    if (fabricCanvas?.freeDrawingBrush) {
       fabricCanvas.freeDrawingBrush.color = !isDrawing ? activeColor : "#FFFFFF";
     }
     toast(isDrawing ? "¡Modo borrador activado!" : "¡Modo pincel activado!");
