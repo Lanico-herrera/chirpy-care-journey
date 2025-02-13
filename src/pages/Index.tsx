@@ -60,10 +60,11 @@ const Index = () => {
     <div 
       className="min-h-screen pb-20"
       style={{
-        backgroundImage: "url('/lovable-uploads/8830aa38-4f1c-4adc-8a25-9f348d0e053b.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
+        backgroundImage: "url('/lovable-uploads/3f14952a-dd74-4956-b0d0-1c599c0459fd.png')",
+        backgroundSize: "contain",
+        backgroundPosition: "bottom",
+        backgroundRepeat: "repeat-x",
+        backgroundColor: "white"
       }}
     >
       <div className="max-w-screen-xl mx-auto px-4 pt-16 sm:pt-20 pb-6 sm:px-6 relative">
