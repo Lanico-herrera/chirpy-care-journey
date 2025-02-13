@@ -1,5 +1,5 @@
 
-import { Brain, Gamepad2, User, Activity, BookOpen } from "lucide-react";
+import { Brain, Gamepad2, User, Activity, BookOpen, CalendarCheck } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { WelcomeCard } from "@/components/WelcomeCard";
 import { CategoryCard } from "@/components/CategoryCard";
@@ -13,7 +13,7 @@ const Index = () => {
       title: "Aprender",
       description: "Descubre todo sobre tu cirugía de una manera divertida",
       to: "/aprender",
-      color: "bg-[#F2FCE2]", // Soft Green
+      color: "bg-[#9b87f5]", // Solid Purple
     },
     {
       icon: Gamepad2,
@@ -27,7 +27,7 @@ const Index = () => {
       title: "Mi Avatar",
       description: "Crea tu personaje especial para esta aventura",
       to: "/avatar",
-      color: "bg-[#E5DEFF]", // Soft Purple
+      color: "bg-[#9b87f5]", // Solid Purple
     },
     {
       icon: Activity,
@@ -35,6 +35,13 @@ const Index = () => {
       description: "Información actualizada sobre tu proceso",
       to: "/cirugia",
       color: "bg-[#FFDEE2]", // Soft Pink
+    },
+    {
+      icon: CalendarCheck,
+      title: "Agenda",
+      description: "Revisa tus próximas citas y actividades",
+      to: "/agenda",
+      color: "bg-[#F2FCE2]", // Soft Green
     },
   ];
 
@@ -61,11 +68,12 @@ const Index = () => {
     <div 
       className="min-h-screen pb-20"
       style={{
-        backgroundImage: "url('/lovable-uploads/1229d2da-daa9-4ffc-ab3d-5a39f6d5a7dc.png')",
-        backgroundSize: "contain",
-        backgroundPosition: "bottom",
-        backgroundRepeat: "repeat-x",
-        backgroundColor: "white"
+        background: `
+          linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%),
+          linear-gradient(180deg, rgb(254,100,121) 0%, rgb(251,221,186) 100%),
+          linear-gradient(225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)
+        `,
+        backgroundBlendMode: 'overlay'
       }}
     >
       <div className="max-w-screen-xl mx-auto px-4 pt-16 sm:pt-20 pb-6 sm:px-6 relative">
@@ -89,7 +97,7 @@ const Index = () => {
               title="Cuentos"
               description="Descubre historias que te ayudarán a sentirte más tranquilo/a"
               to="/cuentos"
-              color="bg-[#E5DEFF]"
+              color="bg-[#9b87f5]"
             />
           </Link>
         </motion.div>
