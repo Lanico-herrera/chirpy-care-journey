@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import Jugar from "./pages/Jugar";
 import Aprender from "./pages/Aprender";
+import Cuentos from "./pages/Cuentos";
 import ColorearHospital from "./pages/ColorearHospital";
 import NotFound from "./pages/NotFound";
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/jugar" element={<Jugar />} />
             <Route path="/aprender" element={<Aprender />} />
+            <Route path="/cuentos" element={<Cuentos />} />
             <Route path="/jugar/colorear" element={<ColorearHospital />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

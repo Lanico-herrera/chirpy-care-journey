@@ -38,27 +38,6 @@ const Index = () => {
     },
   ];
 
-  const stories = [
-    {
-      id: 1,
-      title: "Mi Amigo el Hospital",
-      description: "Descubre el hospital de una manera divertida y amigable",
-      to: "/aprender/mi-amigo-hospital"
-    },
-    {
-      id: 2,
-      title: "La Aventura de Sara en Pabellón",
-      description: "Acompaña a Sara en su visita al pabellón quirúrgico",
-      to: "/aprender/sara-pabellon"
-    },
-    {
-      id: 3,
-      title: "El Doctor Oso y sus Amigos",
-      description: "Una historia sobre la amistad y el cuidado en el hospital",
-      to: "/aprender/doctor-oso"
-    }
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -104,30 +83,19 @@ const Index = () => {
           animate="visible"
           className="mb-8"
         >
-          <div className="bg-[#E5DEFF] rounded-2xl p-6 mb-4">
-            <h2 className="text-xl font-bold text-gray-800 mb-3">Cuentos</h2>
-            <p className="text-gray-700 mb-4">Descubre historias que te ayudarán a sentirte más tranquilo/a</p>
-            <div className="grid gap-3">
-              {stories.map((story) => (
-                <motion.div key={story.id} variants={itemVariants}>
-                  <Link
-                    to={story.to}
-                    className="block bg-white/80 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-all"
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="bg-white p-2 rounded-lg">
-                        <BookOpen className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-800">{story.title}</h3>
-                        <p className="text-sm text-gray-600">{story.description}</p>
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
+          <Link to="/cuentos" className="block">
+            <div className="bg-[#E5DEFF] rounded-2xl p-6 mb-4 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4">
+                <div className="bg-white p-3 rounded-xl">
+                  <BookOpen className="w-6 h-6 text-gray-700" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold text-gray-800">Cuentos</h2>
+                  <p className="text-gray-700">Descubre historias que te ayudarán a sentirte más tranquilo/a</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </Link>
         </motion.div>
         
         {/* Categorías */}
