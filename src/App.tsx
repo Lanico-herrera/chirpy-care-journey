@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import Jugar from "./pages/Jugar";
+import Aprender from "./pages/Aprender";
 import ColorearHospital from "./pages/ColorearHospital";
 import NotFound from "./pages/NotFound";
 
@@ -22,6 +23,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/jugar" element={<Jugar />} />
+            <Route path="/aprender" element={<Aprender />} />
             <Route path="/jugar/colorear" element={<ColorearHospital />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
