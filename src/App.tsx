@@ -11,6 +11,9 @@ import Aprender from "./pages/Aprender";
 import Cuentos from "./pages/Cuentos";
 import ColorearHospital from "./pages/ColorearHospital";
 import NotFound from "./pages/NotFound";
+import MiAmigoHospital from "./pages/cuentos/MiAmigoHospital";
+import SaraPabellon from "./pages/cuentos/SaraPabellon";
+import DoctorOso from "./pages/cuentos/DoctorOso";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +30,9 @@ const App = () => (
             <Route path="/aprender" element={<Aprender />} />
             <Route path="/cuentos" element={<Cuentos />} />
             <Route path="/jugar/colorear" element={<ColorearHospital />} />
+            <Route path="/aprender/mi-amigo-hospital" element={<MiAmigoHospital />} />
+            <Route path="/aprender/sara-pabellon" element={<SaraPabellon />} />
+            <Route path="/aprender/doctor-oso" element={<DoctorOso />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
